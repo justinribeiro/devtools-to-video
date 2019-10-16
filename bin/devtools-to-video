@@ -1,0 +1,97 @@
+#!/usr/bin/env node
+'use strict';
+
+const devtoolsToVideo = require('../src/run');
+const cliArgs = require('command-line-args');
+const chalk = require('chalk');
+
+const CLI_TITLE = chalk.bold.underline('DEVTOOLS-TO-VIDEO');
+const CLI_DESCRIPTION = 'Output a video file from screenshot frames within a Chrome DevTools JSON trace file.';
+const CLI_USAGE = 'Usage: `devtools-to-video [options ...]`';
+
+const HELP_HEADER = `
+  ${CLI_TITLE}
+  ${CLI_DESCRIPTION}
+  ${CLI_USAGE}
+`;
+
+const options = [
+  {
+    name: 'input',
+    alias: 'i',
+    type: String,
+    defaultValue: '',
+    description: 'File path to Chrome DevTools trace JSON file.',
+  },
+  {
+    name: 'output',
+    alias: 'o',
+    type: String,
+    defaultValue: '',
+    description: 'Output file name for video file.',
+  },
+  {
+    name: 'hideClock',
+    alias: 'c',
+    type: Boolean,
+    defaultValue: false,
+    description: 'If set, hides the time scale clock on the output video file.',
+  },
+  {
+    name: 'label',
+    alias: 'l',
+    type: String,
+    defaultValue: '',
+    description: 'If set, adds the label above the time scale clock in the output video file.',
+  },
+  {
+    name: 'frames',
+    alias: 'f',
+    type: Number,
+    defaultValue: 60,
+    description: 'Sets the frames per second of the output video.',
+  },
+  {
+    name: 'help',
+    alias: 'h',
+    type: Boolean,
+    description: 'Print out helpful usage information for this program.',
+  },
+  {
+    name: 'version',
+    alias: 'v',
+    type: Boolean,
+    description: 'Print out current program version number.',
+  },
+];
+
+const args = cliArgs(options);
+
+function getUsage() {
+  return require('command-line-usage')([
+    {
+      content: HELP_HEADER,
+      raw: true,
+    },
+    {
+      header: 'Global Options',
+      optionList: options,
+    },
+    {
+      header: 'Version',
+      content: `${require('../package.json').version}`,
+    },
+  ]);
+}
+
+if (args.help) {
+  console.log(getUsage());
+  process.exit(0);
+}
+
+if (args.version) {
+  console.log('devtools-to-video:', require('../package.json').version);
+  process.exit(0);
+}
+
+devtoolsToVideo(args);
