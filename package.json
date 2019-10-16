@@ -1,6 +1,6 @@
 {
   "name": "@justinribeiro/devtools-to-video",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Output a video file from screenshot frames within a Chrome DevTools JSON trace file.",
   "main": "src/run.js",
   "repository": "git@github.com:justinribeiro/devtools-to-video.git",
@@ -16,5 +16,11 @@
     "eslint-plugin-node": "^10.0.0",
     "prettier": "^1.18.2",
     "tmp": "^0.1.0"
-  }
+  },
+  "keywords": [
+    "chrome",
+    "devtools",
+    "trace",
+    "video"
+  ]
 }

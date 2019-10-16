@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/%40justinribeiro%2Fdevtools-to-video.svg)](https://badge.fury.io/js/%40justinribeiro%2Fdevtools-to-video)
+
 # devtools-to-video
 
 > Output a video file from screenshot frames within a Chrome DevTools JSON trace file.
