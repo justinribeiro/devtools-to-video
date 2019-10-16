@@ -3,6 +3,9 @@
   "version": "0.2.0",
   "description": "Output a video file from screenshot frames within a Chrome DevTools JSON trace file.",
   "main": "src/run.js",
+  "bin": {
+    "devtools-to-video": "./bin/devtools-to-video"
+  },
   "repository": "git@github.com:justinribeiro/devtools-to-video.git",
   "author": "Justin Ribeiro <justin@justinribeiro.com>",
   "license": "MIT",
