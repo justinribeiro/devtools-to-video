@@ -9,16 +9,18 @@
   "repository": "git@github.com:justinribeiro/devtools-to-video.git",
   "author": "Justin Ribeiro <justin@justinribeiro.com>",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "chalk": "^2.4.2",
     "command-line-args": "^5.1.1",
     "command-line-usage": "^6.0.2",
+    "tmp": "^0.1.0"
+  },
+  "devDependencies": {
     "eslint": "^6.5.1",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-node": "^10.0.0",
-    "prettier": "^1.18.2",
-    "tmp": "^0.1.0"
+    "prettier": "^1.18.2"
   },
   "keywords": [
     "chrome",
