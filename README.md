@@ -4,7 +4,7 @@
 
 ![image](https://user-images.githubusercontent.com/643503/66878963-26095700-ef71-11e9-96e7-7977b4f73577.png)
 
-Example video: [justinribeiro.com @ 3G Slow, Moto G4](https://www.youtube.com/watch?v=guJLfqTFfIw)
+Example video output from tool: [justinribeiro.com @ 3G Slow, Moto G4](https://www.youtube.com/watch?v=guJLfqTFfIw)
 
 ## Install
 
@@ -58,3 +58,4 @@ Version
 
 1. WebPageTest does this [way cooler](https://github.com/WPO-Foundation/webpagetest/blob/26e3cf0/www/video/render.php#L567).
 2. Kris Selden's [trace-to-mp4.js gist](https://gist.github.com/krisselden/bf98fb0c192fcb73ed32e79c0a7972d2) (mad props)
+3. FFMPEG...we're had some adventures haven't we?
