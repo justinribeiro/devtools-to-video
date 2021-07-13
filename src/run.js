@@ -39,8 +39,9 @@ module.exports = function devtoolsToVideo(args) {
     );
     throw new Error();
   }
-
-  const screenshots = timeline.filter(event => event.name === 'Screenshot');
+  // Depends on how you grab it meh
+  const events = timeline.traceEvents || timeline;
+  const screenshots = events.filter(event => event.name === 'Screenshot');
   if (screenshots.length === 0) {
     messageError(
       'Trace contains no screenshots. Did you make sure screenshots were enabled before recording your trace?',
